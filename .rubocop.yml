@@ -1,5 +1,6 @@
 AllCops:
   TargetRubyVersion: 2.7
+  NewCops: enable
 Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: true
 Layout/SpaceAroundMethodCallOperator:
@@ -32,3 +33,5 @@ Style/SlicingWithRange:
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
+Metrics/MethodLength:
+  Enabled: false

@@ -6,13 +6,11 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Taukajp"]
   spec.email         = ["taukajp@gmail.com"]
 
-  spec.summary       = "Todo management tool."
-  spec.description   = "Todo management tool."
+  spec.summary       = "Todo Task management tool."
+  spec.description   = "Todo Task management tool."
   spec.homepage      = "https://github.com/taukajp/todo"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
-
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/taukajp/todo"
@@ -26,6 +24,10 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_runtime_dependency "activerecord", "~> 6.0"
+  spec.add_runtime_dependency "sqlite3", "~> 1.4"
+  spec.add_runtime_dependency "thor", "~> 1.0"
 
   spec.add_development_dependency "yard", "~> 0.9"
 end
