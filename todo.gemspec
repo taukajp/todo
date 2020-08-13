@@ -26,6 +26,11 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "activerecord", "~> 6.0"
+  spec.add_runtime_dependency "puma", "~> 5.0"
+  spec.add_runtime_dependency "rack-flash3", "~> 1.0"
+  spec.add_runtime_dependency "sinatra", "~> 2.1"
+  spec.add_runtime_dependency "sinatra-contrib", "~> 2.1"
+  spec.add_runtime_dependency "slim", "~> 4.1"
   spec.add_runtime_dependency "sqlite3", "~> 1.4"
   spec.add_runtime_dependency "thor", "~> 1.0"
 
