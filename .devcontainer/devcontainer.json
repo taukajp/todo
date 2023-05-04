@@ -48,7 +48,8 @@
       "extensions": [
         "Shopify.ruby-extensions-pack",
         "formulahendry.code-runner",
-        "pavlitsky.yard"
+        "pavlitsky.yard",
+        "cweijan.vscode-database-client2"
       ]
     }
   }
