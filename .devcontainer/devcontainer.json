@@ -28,6 +28,10 @@
       // Set *default* container specific settings.json values on container create.
       "settings": {
         "editor.tabSize": 2,
+        "files.associations": {
+          "*.html.erb": "erb",
+          "*.erb": "erb"
+        },
         "terminal.integrated.profiles.linux": {
           "bash": {
             "path": "bash",
@@ -39,9 +43,29 @@
         "terminal.integrated.defaultProfile.linux": "bash",
         "rubyLsp.rubyVersionManager": "none",
         "rubyLsp.formatter": "auto",
+        "emmet.triggerExpansionOnTab": true,
+        "emmet.includeLanguages": {
+          "*.html.erb": "html",
+          "*.erb": "html"
+        },
+        "vscode-erb-beautify.useBundler": true,
         "[ruby]": {
           "editor.formatOnSave": false,
           "editor.defaultFormatter": "Shopify.ruby-lsp"
+        },
+        "[html]": {
+          "editor.formatOnSave": false,
+          "editor.defaultFormatter": "vscode.html-language-features"
+        },
+        "[erb]": {
+          "editor.formatOnSave": false,
+          "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+        },
+        "tailwindCSS.emmetCompletions": true,
+        "tailwindCSS.includeLanguages": {
+          "javascript": "javascript",
+          "html": "html",
+          "erb": "html"
         }
       },
       // Add the IDs of extensions you want installed when the container is created.
@@ -49,7 +73,11 @@
         "Shopify.ruby-extensions-pack",
         "formulahendry.code-runner",
         "pavlitsky.yard",
-        "cweijan.vscode-database-client2"
+        "cweijan.vscode-database-client2",
+        "codelios.dartsass",
+        "craigmaslowski.erb",
+        "aliariff.vscode-erb-beautify",
+        "bradlc.vscode-tailwindcss"
       ]
     }
   }

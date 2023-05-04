@@ -12,3 +12,4 @@ gem "minitest", "~> 5.0"
 gem "debug", "~> 1.8", :groups => [:development, :test], :require => false
 gem "rubocop", "~> 1.57", :groups => [:development, :test], :require => false
 gem "yard", "~> 0.9.34", :groups => [:development, :test], :require => false
+gem "htmlbeautifier", "~> 1.4", :groups => [:development, :test]

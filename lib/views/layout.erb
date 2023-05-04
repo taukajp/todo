@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Todo Application</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/rails-ujs.js"></script>
+  </head>
+  <body>
+    <div class="container my-2 mx-auto h-screen overflow-hidden bg-white flex flex-col">
+      <!-- navi -->
+      <nav class="bg-gray-200 shadow shadow-gray-300">
+        <div class="h-16 px-6 flex items-center justify-start flex-wrap md:flex-nowrap space-x-10 md:space-x-20">
+          <h1 class="h-full flex flex-shrink-0 items-center text-2xl text-gray-800 font-bold"><a href="/tasks" class="h-full flex items-center">TODO</a></h1>
+          <ul class="flex items-center space-x-2 sm:space-x-8 text-xl text-gray-700 font-semibold capitalize">
+            <li><a href="/tasks" class="px-1 border-b-4 <%= !@status ? "border-orange-400" : "hover:border-blue-500" %>">All Tasks</a></li>
+            <li><a href="/tasks?status=notyet" class="px-1 border-b-4 <%= @status == "notyet" ? "border-orange-400" : "hover:border-blue-500" %>">Notyet Tasks</a></li>
+            <li><a href="/tasks?status=done" class="px-1 border-b-4 <%= @status == "done" ? "border-orange-400" : "hover:border-blue-500" %>">Done Tasks</a></li>
+            <li><a href="/tasks?status=pending" class="px-1 border-b-4 <%= @status == "pending" ? "border-orange-400" : "hover:border-blue-500" %>">Pending Tasks</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- main -->
+      <main class="relative overflow-y-auto focus:outline-none">
+        <%= yield %>
+      </main>
+    </div>
+  </body>
+</html>
