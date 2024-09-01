@@ -2,8 +2,10 @@
 2. .envにAPP_NAME(default: myapp)、VARIANT(default: 3-bullseye)を設定
 3. devcontainer.jsonのworkspaceFolder(default: myapp)を設定
 
-docker rmi -f vs_ruby_gem_app
+docker rmi -f todo_app
 docker system prune --volumes
 
-bundle exec rdbg --open lib/myapp.rb
+bundle exec exe/todo
+
+bundle exec rdbg --open lib/todo.rb
 Attach with rdbg

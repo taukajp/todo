@@ -64,7 +64,8 @@
         "Shopify.ruby-extensions-pack",
         "KoichiSasada.vscode-rdbg",
         "formulahendry.code-runner",
-        "pavlitsky.yard"
+        "pavlitsky.yard",
+        "cweijan.vscode-database-client2"
       ]
     }
   }
