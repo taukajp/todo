@@ -2,7 +2,7 @@
   "name": "Ruby",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
-  "workspaceFolder": "/myapp",
+  "workspaceFolder": "/todo",
 
   "features": {
     // "git": "latest"
