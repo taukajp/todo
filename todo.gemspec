@@ -39,6 +39,11 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "activerecord", "~> 7.2"
   spec.add_runtime_dependency "sqlite3", "~> 2.0"
   spec.add_runtime_dependency "thor", "~> 1.3"
+  spec.add_runtime_dependency "puma", "~> 6.4"
+  spec.add_runtime_dependency "rack-flash3", "~> 1.0"
+  spec.add_runtime_dependency "sinatra", "~> 4.0"
+  spec.add_runtime_dependency "sinatra-contrib", "~> 4.0"
+  spec.add_runtime_dependency "rackup", "~> 2.1"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
