@@ -13,29 +13,31 @@
       <span>New</span>
     </a>
   </div>
-  <div class="overflow-hidden min-w-max">
-    <div class="grid grid-cols-12 gap-x-2 px-4 h-14 text-base text-gray-900 font-semibold bg-sky-100 border-t border-b border-gray-200">
-      <div class="flex items-center px-2 col-span-1">
-        ID
+  <turbo-frame id="todo-list">
+    <div class="overflow-hidden min-w-max">
+      <div class="grid grid-cols-12 gap-x-2 px-4 h-14 text-base text-gray-900 font-semibold bg-sky-100 border-t border-b border-gray-200">
+        <div class="flex items-center px-2 col-span-1">
+          ID
+        </div>
+        <div class="flex items-center px-2 col-span-2">
+          Name
+        </div>
+        <div class="flex items-center px-2 col-span-4">
+          Content
+        </div>
+        <div class="flex items-center px-2 col-span-1">
+          Status
+        </div>
+        <div class="flex items-center px-2 col-span-2">
+          Created Time
+        </div>
+        <div class="flex items-center px-2 col-span-2">
+          Operation
+        </div>
       </div>
-      <div class="flex items-center px-2 col-span-2">
-        Name
-      </div>
-      <div class="flex items-center px-2 col-span-4">
-        Content
-      </div>
-      <div class="flex items-center px-2 col-span-1">
-        Status
-      </div>
-      <div class="flex items-center px-2 col-span-2">
-        Created Time
-      </div>
-      <div class="flex items-center px-2 col-span-2">
-        Operation
-      </div>
+      <% @tasks.each do |task| %>
+        <%= render :erb ,:'tasks/_todo', locals: { task: task } %>
+      <% end %>
     </div>
-    <% @tasks.each do |task| %>
-      <%= render :erb ,:'tasks/_todo', locals: { task: task } %>
-    <% end %>
-  </div>
+  </turbo-frame>
 </div>
